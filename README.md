@@ -1,37 +1,69 @@
-Bank App API
-A full-featured Django REST Framework-based backend API for a banking application. This app allows customers to register, manage their bank accounts, make transactions, and view bank statements. Admins and bank staff can also manage customer data, approve accounts, and monitor transactions.
+# 🏦 Bank App API
+A full-featured backend banking system built with Django and Django REST Framework (DRF). This RESTful API provides comprehensive features for customers, admins, and bank staff to manage user profiles, perform transactions, and handle account operations in a secure and scalable way.
 
-Features
-- Customer
-- Register and Login
-- Update profile
-- Deposit & Withdraw funds
+## ✨ Features
+👤 Customer
+- Register and log in
+- Update profile information
+- Deposit and withdraw funds
 - Transfer money to other customers
 - Pay utility bills
 - Purchase airtime
-- View bank statements
 - View transaction history
+- Generate and download bank statements
 
-Admin
-- Register and Login
+## 🛠️ Admin
+- Register and log in
 - Update admin profile
 - View all admins
-- View single admin profile
+- View individual admin profiles
 
-Bank Staff
-- Add new staff to system
+👨‍💼 Bank Staff
+- Add new staff members
 - View all bank staff
-- View single bank staff profile
+- View individual staff profiles
 
-Account Management
-- View all customers
-- View single customer details
+📋 Account Management
+- View all registered customers
+- View details for a single customer
 - View all transactions
-- View single transaction
+- View specific transaction details
 
-Tech Stack
-- Backend Framework: Django, Django REST Framework
-- Database: Default (SQLite) – can be swapped for PostgreSQL/MySQL
-- Authentication: Basic DRF serializers (JWT/Auth to be added)
-- Serialization: DRF Serializers
-- Random Account Number Generator: Python random module
+## 🧰 Tech Stack
+- Layer	Technology
+- Backend Framework	Django, Django REST Framework
+- Database	SQLite (default) – can be changed
+- Authentication	DRF Serializers (JWT/Token support planned)
+- Serialization	DRF Serializers
+- Utilities	Python's random module for account numbers
+
+## 🔐 Authentication
+Currently uses Django session-based authentication via DRF. JWT or Token-based authentication can be added for production environments.
+
+## 📁 Example API Endpoints
+- Method	Endpoint	Description
+- POST	/api/register/	Customer registration
+- POST	/api/login/	User login
+- GET	/api/customers/	List all customers (admin/staff only)
+- POST	/api/deposit/	Deposit money
+- POST	/api/withdraw/	Withdraw money
+- POST	/api/transfer/	Transfer between accounts
+- GET	/api/transactions/	View transaction history
+- POST	/api/utility-payment/	Pay bills
+- POST	/api/airtime-purchase/	Purchase airtime
+
+More endpoints available depending on role and permissions.
+
+## 🧪 API Testing Tools
+You can test the endpoints using:
+- Postman
+- cURL
+- httpie
+
+## 🛠️ Future Enhancements
+✅ JWT Authentication (djangorestframework-simplejwt)
+✅ Swagger/OpenAPI Documentation
+✅ Role-Based Permissions (Admin, Staff, Customer)
+✅ Email Notifications for Transactions
+✅ Docker Support for Easy Deployment
+
